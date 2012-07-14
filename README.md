@@ -13,7 +13,8 @@ Draw a green rectangle 32 x 32 at 200,300
 ### HTML/CSS
 
 ``` html
-<div style="width: 32px; height: 32px; position:absolute; left: 200px; top: 300px; background-color: green;"></div>
+<div style="width: 32px; height: 32px; position:absolute; 
+left: 200px; top: 300px; background-color: green;"></div>
 ```
     
 ### SVG
@@ -46,10 +47,12 @@ draw.rectangle([(200,300),(232,332)],{fill: 'green'})
 
 ### ImageMagick
 
-Note, for this example, we first create a 500x500 image in memory and fill it with the color skyblue, then we draw the rect, then we save it to the file draw_rect.gif.
+Note, for this example, we first create a 500x500 image in memory and fill it with the color skyblue, then we draw the rect, then we save it to the file draw_rect.gif. The middle line is the goal of this exercise.
 
 ```bash
-convert -size 500x500 xc:skyblue -fill green -draw "rectangle 200,300 32,32" draw_rect.gif
+convert -size 500x500 xc:skyblue \
+-fill green -draw "rectangle 200,300 32,32" \
+draw_rect.gif
 ```
 
 ### Processing
